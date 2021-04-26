@@ -1,0 +1,33 @@
+{
+  "name": "electronproject",
+  "version": "1.0.0",
+  "description": "Master Electron Course Code",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "watch": "nodemon --exec electron .",
+    "reset": "git reset --hard"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stackacademytv/master-electron.git"
+  },
+  "keywords": [
+    "Electron",
+    "Master Electron",
+    "demo"
+  ],
+  "author": "GitHub, Stackacademytv",
+  "license": "CC0-1.0",
+  "devDependencies": {
+    "electron": "^9.0.0",
+    "nodemon": "^2.0.0"
+  },
+  "dependencies": {
+    "electron-window-state": "^5.0.3"
+  },
+  "bugs": {
+    "url": "https://github.com/stackacademytv/master-electron/issues"
+  },
+  "homepage": "https://github.com/stackacademytv/master-electron#readme"
+}

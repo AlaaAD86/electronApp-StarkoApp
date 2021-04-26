@@ -1,7 +1,7 @@
 {
   "name": "electronproject",
   "version": "1.0.0",
-  "description": "Master Electron Course Code",
+  "description": "Electron App",
   "main": "main.js",
   "scripts": {
     "start": "electron .",
@@ -10,14 +10,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/stackacademytv/master-electron.git"
+    "url": "git+https://github.com/AlaaAD86/electronApp-StarkoApp"
   },
   "keywords": [
     "Electron",
     "Master Electron",
     "demo"
   ],
-  "author": "GitHub, Stackacademytv",
+  "author": "AlaaAD",
   "license": "CC0-1.0",
   "devDependencies": {
     "electron": "^9.0.0",
@@ -27,7 +27,7 @@
     "electron-window-state": "^5.0.3"
   },
   "bugs": {
-    "url": "https://github.com/stackacademytv/master-electron/issues"
+    "url": "https://github.com/AlaaAD86/electronApp-StarkoApp"
   },
-  "homepage": "https://github.com/stackacademytv/master-electron#readme"
+  "homepage": "https://github.com/AlaaAD86/electronApp-StarkoApp"
 }

@@ -12,6 +12,32 @@ let showModal = document.getElementById('show-modal'),
     itemUrl = document.getElementById('url'),
     search = document.getElementById('search')
 
+// open modal window from menu
+ipcRenderer.on('menu-show-modal', () => {
+    showModal.click();
+});
+
+// Open selected item from menu
+ipcRenderer.on('menu-open-item', () => {
+    items.open();
+});
+
+// Delete selected item from menu
+ipcRenderer.on('menu-delete-item', () => {
+    let seletedItem = items.getSelectedItem();
+    items.delete(seletedItem.index)
+});
+
+// Open NATIVE in browser from menu
+ipcRenderer.on('menu-open-item-native', () => {
+    items.openNativeInBrowser()
+});
+
+// Search for items
+ipcRenderer.on('menu-focus-search', () => {
+    search.focus();
+});
+
 // filter items when searching
 search.addEventListener('keyup', e => {
 

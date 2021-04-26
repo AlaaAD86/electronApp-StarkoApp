@@ -1,3 +1,4 @@
+const { shell } = require('electron');
 const fs = require('fs');
 
 // DOM nodes
@@ -54,6 +55,7 @@ exports.getSelectedItem = () => {
 // Track items in storage
 exports.storage = JSON.parse(localStorage.getItem('readit-items')) || [];
 
+
 // Persist storage
 exports.save = () => {
   localStorage.setItem('readit-items', JSON.stringify(this.storage));
@@ -83,6 +85,22 @@ exports.changeSelection = direction => {
         currentItem.node.nextElementSibling.classList.add('selected');
     }
 }
+
+// open selected item in native browser
+exports.openNativeInBrowser = () => {
+    //Checking if we don not have items in the storage
+    if (!this.storage.length) return;
+
+    // Getting the selected item
+    let selectedItem =  this.getSelectedItem();
+
+    // Getting the item url
+    let contentUrl = selectedItem.node.dataset.url;
+
+    // open in default browser
+    shell.openExternal(contentUrl)
+}
+
 
 // Open selected item
 exports.open = () => {

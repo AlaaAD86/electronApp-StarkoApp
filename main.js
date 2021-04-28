@@ -21,14 +21,14 @@ ipcMain.on('new-item', (event, itemUrl) => {
 function createWindow () {
   // win state keeper : keeps window size as precised when launched
   let state = windowStateKeeper({
-    defaultWidth: 500, defaultHeight: 650
+    defaultWidth: 1024, defaultHeight: 800
   })
   mainWindow = new BrowserWindow({
     x: state.x,
     y: state.y, 
     width: state.width,
     height: state.height,
-    minWidth: 450, maxWidth: 750,
+    minWidth: 450, maxWidth: 900,
     minHeight: 300,
     webPreferences: { nodeIntegration: true }
   });
@@ -43,7 +43,7 @@ function createWindow () {
   state.manage(mainWindow);
 
   // Open DevTools - Remove for PRODUCTION!
-  mainWindow.webContents.openDevTools();
+  // mainWindow.webContents.openDevTools();
 
   // Listen for window being closed
   mainWindow.on('closed',  () => {

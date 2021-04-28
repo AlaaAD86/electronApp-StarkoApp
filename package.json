@@ -1,12 +1,13 @@
 {
-  "name": "electronproject",
+  "name": "starko",
   "version": "1.0.0",
   "description": "Electron App",
   "main": "main.js",
   "scripts": {
     "start": "electron .",
     "watch": "nodemon --exec electron .",
-    "reset": "git reset --hard"
+    "reset": "git reset --hard",
+    "build": "electron-builder --help"
   },
   "repository": {
     "type": "git",
@@ -14,17 +15,31 @@
   },
   "keywords": [
     "Electron",
-    "Master Electron",
     "demo"
   ],
   "author": "AlaaAD",
   "license": "CC0-1.0",
   "devDependencies": {
     "electron": "^9.0.0",
+    "electron-builder": "^22.10.5",
     "nodemon": "^2.0.0"
   },
   "dependencies": {
     "electron-window-state": "^5.0.3"
+  },
+  "build": {
+    "appId": "com.adev.starko",
+    "copyright": "Copyright Adev",
+    "mac": {
+      "category": "public.app-category.productivity", 
+      "target": "dmg"
+    },
+    "win": {
+      "target": "zip"
+    },
+    "linux": {
+      "category": "Utility" 
+    }
   },
   "bugs": {
     "url": "https://github.com/AlaaAD86/electronApp-StarkoApp"
